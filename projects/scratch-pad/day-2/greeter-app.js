@@ -42,7 +42,8 @@ function greeter(hour) {
      * hour <= 16, etc.
      * this will weed out anything below the low end of each range automatically.
      * use console.log
-    
+     */
+     
     if (hour <= 11) {
         console.log("Good Morning!");
     } else if (hour <= 16) {

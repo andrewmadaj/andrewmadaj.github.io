@@ -80,16 +80,36 @@ function makeContactList() {
                 }
         },
         // create key removeContact
-         // assign it a value of a function with one parameter "contact"
-          // create code body
-           // delete contact from contacts object
+         //
         removeContact: function(contact) {
             for (var j = 0; j <= contacts.length - 1; j++)
                 if (contacts[j].nameFirst == contact.nameFirst && contacts[j].nameLast == contact.nameLast && contacts[j].id == contact.id) {
-                    delete contacts[j];
+                    console.log("yes");
+                    contacts.splice(0,1);
                 }
-        }
-    }
+        },
+        // add function named printAllContactNames
+        // initialize a variable with an empty string
+        // create a for loop
+         // create a conditional that runs through the entire loop
+          // create a code body
+           // create an if statement 
+            // create a conditional that says if the contact is the last in the list, do not create a new line.
+             // create code body
+              // concat to the empty string: nameFirst plus a space plus name last
+           // create an else statement
+            // create a code body
+             // concat to the empty string: nameFirst plus a space plus name last plus a new line
+         // return emptyString 
+         printAllContactNames: function() {
+             var emptyString = [];
+             for (var k = 0; k <= contacts.length - 1; k++) {
+                 emptyString.push(contacts[k].nameFirst + ' ' + contacts[k].nameLast);
+             }
+             
+             return emptyString.join('\n');
+         }
+    };
 }
 
 
